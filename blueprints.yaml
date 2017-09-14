@@ -19,9 +19,21 @@ form:
     tagline:
         type: textarea
         label: Site tagline
+    theme_color:
+        type: select
+        label: Select color
+        options:
+          theme-base-08: Red
+          theme-base-09: Orange
+          theme-base-0a: Yellow
+          theme-base-0b: Green
+          theme-base-0c: Olive
+          theme-base-0d: Blue
+          theme-base-0e: Purple
+          theme-base-0f: Brown
     dropdown.enabled:
         type: toggle
-        label: Dropdown in Menu
+        label: Blog posts in Menu
         highlight: 1
         default: 1
         options:

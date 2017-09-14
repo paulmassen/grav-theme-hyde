@@ -35,7 +35,7 @@
 
 {% endblock head%}
 </head>
-<body class="{{ page.header.body_classes }}">
+<body class="{{ theme_config.theme_color }} {{ page.header.body_classes }}">
   {% include 'partials/sidebar.html.twig' %}
 
     <div class="content container">
