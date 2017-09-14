@@ -1,0 +1,37 @@
+{% macro loop(page) %}
+    {% for p in page.children.visible %}
+        {% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
+        {% if p.children.visible.count > 0 %}
+                <a class="has-children sidebar-nav-item {{current_page }}" href="{{ p.url }}">
+                    {% if p.header.icon %}<i class="fa fa-{{ p.header.icon }}"></i>{% endif %}
+                    {{ p.menu }}
+                </a>
+                <a>
+                    {{ _self.loop(p) }}
+                </a>
+        {% else %}
+                <a class="sidebar-nav-item {{ current_page }}" href="{{ p.url }}">
+                    {{ p.menu }}
+                </a>
+            </a>
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
+
+    {% if theme_config.dropdown.enabled %}
+        {{ _self.loop(pages) }}
+    {% else %}
+        {% for page in pages.children.visible %}
+            {% set current_page = (page.active or page.activeChild) ? 'selected' : '' %}
+            <a class="sidebar-nav-item {{current_page}}" href="{{ page.url }}">
+                    {{ page.menu }}
+                </a>
+
+        {% endfor %}
+    {% endif %}
+    {% for mitem in site.menu %}
+            <a class="sidebar-nav-item" href="{{ mitem.url }}">
+                {{ mitem.text }}
+            </a>
+    {% endfor %}
+

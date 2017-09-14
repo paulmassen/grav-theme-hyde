@@ -1,0 +1,12 @@
+{% extends 'partials/base.html.twig' %}
+{% block content %}
+<div class="page">
+  <h1 class="page-title">{{ page.title }}</h1>
+  {{ page.content }}
+  {% for article in page.collection %}
+  <h2> {{article.title }}</h2>
+  <p>{{ article.summary }}<a href="{{article.url}}">Read More</a></p>
+  <hr>
+  {% endfor %}
+</div>
+{% endblock %}

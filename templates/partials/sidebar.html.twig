@@ -1,0 +1,18 @@
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="{{ base_url }}">
+          {{ site.title }}
+        </a>
+      </h1>
+      <p class="lead">{{ theme_config.tagline }}</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      {% include 'partials/navigation.html.twig'%}
+    </nav>
+
+    <p>&copy; {{ page.date|date('Y') }}. All rights reserved.</p>
+  </div>
+</div>
