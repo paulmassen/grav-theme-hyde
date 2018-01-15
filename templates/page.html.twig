@@ -8,5 +8,8 @@
   <p>{{ article.summary }}<a href="{{article.url}}">Read More</a></p>
   <hr>
   {% endfor %}
+  {% if config.plugins.pagination.enabled and collection.params.pagination %}
+    {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+  {% endif %}
 </div>
 {% endblock %}
