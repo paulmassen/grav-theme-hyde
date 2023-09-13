@@ -26,16 +26,16 @@
         {% do assets.addCss('theme://css/custom.css', 96) %}
         
     {% endblock %}
-    {{ assets.css() }}
+    {{ assets.css()|raw }}
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
     {% block javascripts %}
         {% do assets.addJs('jquery', 100) %}
     {% endblock %}
-    {{ assets.js() }}
+    {{ assets.js()|raw }}
 
 {% endblock head%}
 </head>
-<body class="{{ theme_config.theme_color }} {{ page.header.body_classes }}">
+<body class="{{ page.header.body_classes }}">
   {% include 'partials/sidebar.html.twig' %}
 
     <div class="content container">
@@ -45,10 +45,8 @@
   </body>
 
 {% block bottom %}
-    {{ assets.js('bottom') }}
+    {{ assets.js('bottom')|raw }}
 {% endblock %}
 
 </body>
 </html>
-
-
