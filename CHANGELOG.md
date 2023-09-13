@@ -2,7 +2,7 @@
 ## 13/09/2023
 1.[](#new)
   * Updated with |raw to work with latest version of Grav
-  * background color + nice scrollbar 
+  * background color for selection + nice scrollbar 
 
 # v0.1.0
 ## 09/14/2017
