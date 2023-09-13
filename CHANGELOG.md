@@ -1,7 +1,8 @@
 # v0.2
 ## 13/09/2023
 1.[](#new)
-   * Updated with |raw to work with latest version of Grav
+  * Updated with |raw to work with latest version of Grav
+  * background color + nice scrollbar 
 
 # v0.1.0
 ## 09/14/2017
