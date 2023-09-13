@@ -1,6 +1,7 @@
 # v0.2
 ## 13/09/2023
- * Updated with |raw to work with latest version of Grav
+1.[](#new)
+   * Updated with |raw to work with latest version of Grav
 
 # v0.1.0
 ## 09/14/2017
