@@ -1,5 +1,6 @@
 # v0.2
 ## 09/13/2023
+
 1.[](#new)
   * Updated with |raw to work with latest version of Grav
   * background color for selection + nice scrollbar 
@@ -15,4 +16,3 @@
 1. [](#new)
     * Started Changelog
     * First Release
-
